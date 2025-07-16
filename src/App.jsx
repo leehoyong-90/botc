@@ -57,25 +57,31 @@ function App() {
   return (
     <div className="App">
       <h1>Blood on the Clocktower Script Builder</h1>
-      <FilterPanel
-        editions={editions}
-        editionFilter={editionFilter}
-        setEditionFilter={setEditionFilter}
-        teams={teams}
-        teamFilter={teamFilter}
-        setTeamFilter={setTeamFilter}
-        search={search}
-        setSearch={setSearch}
-      />
-      <div className="character-grid">
-        {filtered.map((char) => (
-          <CharacterCard
-            key={char.id}
-            character={char}
-            selected={selected.some((c) => c.id === char.id)}
-            onToggle={() => toggleSelect(char)}
+      <div className="main-layout">
+        <aside className="filter-sidebar">
+          <FilterPanel
+            editions={editions}
+            editionFilter={editionFilter}
+            setEditionFilter={setEditionFilter}
+            teams={teams}
+            teamFilter={teamFilter}
+            setTeamFilter={setTeamFilter}
+            search={search}
+            setSearch={setSearch}
           />
-        ))}
+        </aside>
+        <div className="character-panel">
+          <div className="character-grid">
+            {filtered.map((char) => (
+              <CharacterCard
+                key={char.id}
+                character={char}
+                selected={selected.some((c) => c.id === char.id)}
+                onToggle={() => toggleSelect(char)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
       <ScriptPanel
         selected={selected}
