@@ -1,5 +1,5 @@
 function ScriptPanel({ selected, onRemove, onClear, onRandom, onSort }) {
-  const json = JSON.stringify(selected.map((c) => c.id), null, 2);
+  const json = JSON.stringify(selected, null, 2);
   const copy = () => navigator.clipboard.writeText(json);
   const download = () => {
     const blob = new Blob([json], { type: 'application/json' });
