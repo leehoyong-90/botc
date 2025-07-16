@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
+  background-color: #eef2ff;
+  padding: 1rem;
+  border-radius: 4px;
 }
 .filter-group {
   display: flex;

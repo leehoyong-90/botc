@@ -2,6 +2,9 @@
   margin-top: 1rem;
   border-top: 1px solid #ccc;
   padding-top: 1rem;
+  background-color: #fffbe6;
+  padding: 1rem;
+  border-radius: 4px;
 }
 .selected-list {
   display: flex;
