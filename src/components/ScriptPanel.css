@@ -4,15 +4,11 @@
   background-color: #fffde7;
   padding: 1rem;
   border-radius: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 .selection {
-  flex: 1 1 300px;
-}
-.json-section {
-  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .selected-list {
   display: flex;
@@ -28,14 +24,4 @@
 }
 .script-buttons button {
   margin-right: 0.5rem;
-}
-.json-preview {
-  max-height: 200px;
-  overflow: auto;
-  background: #f0f0f0;
-  padding: 0.5rem;
-  text-align: left;
-}
-.json-buttons {
-  margin-top: 0.5rem;
 }

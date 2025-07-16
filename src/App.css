@@ -1,3 +1,4 @@
+
 .App {
   width: 100vw;
   min-height: 100vh;
@@ -10,35 +11,31 @@
   align-items: flex-start;
   gap: 1rem;
 }
-.filter-sidebar {
-  width: 300px;
+
+.side-panel {
+  width: 340px;
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
   height: 100vh;
-  overflow-y: auto;
 }
-.character-panel {
+
+.sheet-panel {
   flex: 1;
-  max-height: 100vh;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  box-sizing: border-box;
   overflow-y: auto;
+  height: 100vh;
 }
+
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 4px;
-}
-.script-sidebar {
-  width: 300px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-  background: #fafafd;
-  border-left: 1px solid #eee;
-  padding: 1rem;
+  margin-top: 1rem;
 }
