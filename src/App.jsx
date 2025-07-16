@@ -3,10 +3,12 @@ import editions from './data/editions';
 import CharacterCard from './components/CharacterCard.jsx';
 import FilterPanel from './components/FilterPanel.jsx';
 import ScriptPanel from './components/ScriptPanel.jsx';
+import SheetView from './components/SheetView.jsx';
 import './App.css';
 import './components/CharacterCard.css';
 import './components/FilterPanel.css';
 import './components/ScriptPanel.css';
+import './components/SheetView.css';
 
 function App() {
   const teams = ['townsfolk', 'outsider', 'minion', 'demon', 'traveler'];
@@ -18,6 +20,8 @@ function App() {
   );
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState([]);
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const allCharacters = useMemo(
     () =>
@@ -56,9 +60,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Blood on the Clocktower Script Builder</h1>
       <div className="main-layout">
-        <aside className="filter-sidebar">
+        <div className="side-panel">
+          <h1>Blood on the Clocktower Script Builder</h1>
           <FilterPanel
             editions={editions}
             editionFilter={editionFilter}
@@ -69,8 +73,6 @@ function App() {
             search={search}
             setSearch={setSearch}
           />
-        </aside>
-        <div className="character-panel">
           <div className="character-grid">
             {filtered.map((char) => (
               <CharacterCard
@@ -81,16 +83,23 @@ function App() {
               />
             ))}
           </div>
-        </div>
-        <aside className="script-sidebar">
           <ScriptPanel
-              selected={selected}
-              remove={remove}
-              clear={clear}
-              randomize={randomize}
-              sortSelected={sortSelected}
+            selected={selected}
+            remove={remove}
+            clear={clear}
+            randomize={randomize}
+            sortSelected={sortSelected}
           />
-        </aside>
+        </div>
+        <div className="sheet-panel">
+          <SheetView
+            selected={selected}
+            title={title}
+            setTitle={setTitle}
+            author={author}
+            setAuthor={setAuthor}
+          />
+        </div>
       </div>
     </div>
   );
