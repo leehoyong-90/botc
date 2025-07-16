@@ -1,8 +1,10 @@
 .App {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
   padding: 1rem;
+  box-sizing: border-box;
 }
+
 .main-layout {
   display: flex;
   align-items: flex-start;
@@ -28,4 +30,15 @@
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 4px;
+}
+.script-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fafafd;
+  border-left: 1px solid #eee;
+  padding: 1rem;
 }

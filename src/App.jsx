@@ -82,6 +82,15 @@ function App() {
             ))}
           </div>
         </div>
+        <aside className="script-sidebar">
+          <ScriptPanel
+              selected={selected}
+              remove={remove}
+              clear={clear}
+              randomize={randomize}
+              sortSelected={sortSelected}
+          />
+        </aside>
       </div>
     </div>
   );
