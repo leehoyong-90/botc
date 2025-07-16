@@ -83,13 +83,6 @@ function App() {
           </div>
         </div>
       </div>
-      <ScriptPanel
-        selected={selected}
-        onRemove={remove}
-        onClear={clear}
-        onRandom={randomize}
-        onSort={sortSelected}
-      />
     </div>
   );
 }
