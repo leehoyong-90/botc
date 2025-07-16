@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <h1>Blood on the Clocktower Script Builder</h1>
       <div className="main-layout">
-        <div className="left-column">
+        <aside className="filter-sidebar">
           <FilterPanel
             editions={editions}
             editionFilter={editionFilter}
@@ -69,6 +69,8 @@ function App() {
             search={search}
             setSearch={setSearch}
           />
+        </aside>
+        <div className="character-panel">
           <div className="character-grid">
             {filtered.map((char) => (
               <CharacterCard
@@ -79,15 +81,6 @@ function App() {
               />
             ))}
           </div>
-        </div>
-        <div className="right-column">
-          <ScriptPanel
-            selected={selected}
-            onRemove={remove}
-            onClear={clear}
-            onRandom={randomize}
-            onSort={sortSelected}
-          />
         </div>
       </div>
     </div>

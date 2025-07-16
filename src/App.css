@@ -5,16 +5,26 @@
 }
 .main-layout {
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
 }
-.left-column,
-.right-column {
+.filter-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.character-panel {
   flex: 1;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .character-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 4px;

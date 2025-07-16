@@ -13,22 +13,32 @@ function ScriptPanel({ selected, onRemove, onClear, onRandom, onSort }) {
 
   return (
     <div className="script-panel">
-      <h3>Selected Characters ({selected.length})</h3>
-      <div className="selected-list">
-        {selected.map((c) => (
-          <span key={c.id} className="selected-item" onClick={() => onRemove(c.id)}>
-            {c.name}
-          </span>
-        ))}
+      <div className="selection">
+        <h3>Selected Characters ({selected.length})</h3>
+        <div className="selected-list">
+          {selected.map((c) => (
+            <span
+              key={c.id}
+              className="selected-item"
+              onClick={() => onRemove(c.id)}
+            >
+              {c.name}
+            </span>
+          ))}
+        </div>
+        <div className="script-buttons">
+          <button onClick={onRandom}>Randomize</button>
+          <button onClick={onSort}>Sort</button>
+          <button onClick={onClear}>Clear</button>
+        </div>
       </div>
-      <div className="script-buttons">
-        <button onClick={onRandom}>Randomize</button>
-        <button onClick={onSort}>Sort</button>
-        <button onClick={onClear}>Clear</button>
+      <div className="json-section">
+        <pre className="json-preview">{json}</pre>
+        <div className="json-buttons">
+          <button onClick={copy}>Copy JSON</button>
+          <button onClick={download}>Download JSON</button>
+        </div>
       </div>
-      <pre className="json-preview">{json}</pre>
-      <button onClick={copy}>Copy JSON</button>
-      <button onClick={download}>Download JSON</button>
     </div>
   );
 }
