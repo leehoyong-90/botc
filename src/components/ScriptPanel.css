@@ -1,9 +1,10 @@
 .script-panel {
   margin-top: 1rem;
   border-top: 1px solid #ccc;
-  background-color: #fffde7;
+  background-color: #fff9e6;
   padding: 1rem;
   border-radius: 4px;
+  color: #333;
 }
 .selection {
   display: flex;
