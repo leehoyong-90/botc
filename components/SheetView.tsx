@@ -3,6 +3,8 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Download, FileText } from 'lucide-react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 interface SheetViewProps {
   selected: Character[];
@@ -30,25 +32,19 @@ export default function SheetView({
     URL.revokeObjectURL(url);
   };
 
-  const exportPdf = () => {
-    const content = `
-${title}
-Created by: ${author}
+  const exportPdf = async () => {
+    const element = document.getElementById('sheet-content');
+    if (!element) return;
 
-Characters:
-${selected.map((char, index) => `${index + 1}. ${char.name} (${teamDisplayNames[char.team]})`).join('\n')}
+    const canvas = await html2canvas(element, { scale: 2 });
+    const imgData = canvas.toDataURL('image/png');
 
-Abilities:
-${selected.map((char) => `${char.name}: ${char.ability}`).join('\n\n')}
-    `;
-    
-    const blob = new Blob([content], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'script.txt';
-    a.click();
-    URL.revokeObjectURL(url);
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('script.pdf');
   };
 
   const teamGroups = selected.reduce((groups, character) => {
@@ -82,7 +78,7 @@ ${selected.map((char) => `${char.name}: ${char.ability}`).join('\n\n')}
               disabled={selected.length === 0}
             >
               <Download className="w-4 h-4 mr-2" />
-              텍스트 내보내기
+              PDF 내보내기
             </Button>
           </div>
         </div>
