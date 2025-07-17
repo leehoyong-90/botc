@@ -1,0 +1,1072 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF'
+diff --git a/index.html b/index.html
+index f94be534b69a38e025425368330c2cda87d7f1a4..2b46fc84685ef35933ea9c5400db45f7b00ce3ff 100644
+--- a/index.html
++++ b/index.html
+@@ -1,13 +1,18 @@
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
++    <link rel="icon" type="image/png" href="/favicon.png" />
++    <meta name="description" content="Blood on the Clocktower script builder" />
++    <meta property="og:title" content="Blood on the Clocktower" />
++    <meta property="og:type" content="website" />
++    <meta property="og:url" content="https://bloodontheclocktower.com" />
++    <meta property="og:image" content="https://assets.bloodontheclocktower.com/img/website/facebook.jpg" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>BOTC Script Builder</title>
+   </head>
+   <body>
+     <div id="root"></div>
+     <script type="module" src="/src/main.jsx"></script>
+   </body>
+ </html>
+diff --git a/public/favicon.png b/public/favicon.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..4d1a6715c494914066dc1ae9f82eaa9c846749d8
+GIT binary patch
+literal 9828
+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
+KMNUMnLSTaN{T`SA
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/App.css b/src/App.css
+index d9316165863fbceb13c8030f380bb77eb098fbd0..5a3f0a075298335b7dd7caab02227d683548c381 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -1,41 +1,43 @@
+
+ .App {
+   width: 100vw;
+   min-height: 100vh;
+   padding: 1rem;
+   box-sizing: border-box;
++  color: #333;
++  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+
+ .main-layout {
+   display: flex;
+   align-items: flex-start;
+   gap: 1rem;
+ }
+
+ .side-panel {
+   width: 340px;
+   flex-shrink: 0;
+-  background: #333;
+-  color: #fff;
++  background: #f5f5f5;
++  color: #333;
+   padding: 1rem;
+   box-sizing: border-box;
+   overflow-y: auto;
+   height: 100vh;
+ }
+
+ .sheet-panel {
+   flex: 1;
+-  background: #fff;
+-  color: #000;
++  background: #ffffff;
++  color: #333;
+   padding: 1rem;
+   box-sizing: border-box;
+   overflow-y: auto;
+   height: 100vh;
+ }
+
+ .character-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   gap: 1rem;
+   margin-top: 1rem;
+ }
+diff --git a/src/assets/images/website/bg-mandala.webp b/src/assets/images/website/bg-mandala.webp
+new file mode 100644
+index 0000000000000000000000000000000000000000..39a277505ca12d4ea730ea96a1b3e0a47cc6030e
+--- /dev/null
++++ b/src/assets/images/website/bg-mandala.webp
+@@ -0,0 +1,528 @@
++<!DOCTYPE html>
++  <html lang="en">
++
++  <head>
++
++    <script>
++        var url = window.location.toString();
++
++        if (url.indexOf('https://the-pandemonium-institute.myshopify.com') != 0) { // hacky way to disable redirect while in admin -- i.e. theme editor
++          if (url.indexOf('/account') < 0 && url.indexOf('/ccpa') < 0) {
++            url = url.replace('checkout.', '');
++            window.location.replace(url);
++          }
++        }
++      </script>
++
++      <script>(function (w, d, s, l, i) {
++              w[l] = w[l] || [];
++              w[l].push({
++                  'gtm.start':
++                      new Date().getTime(), event: 'gtm.js'
++              });
++              var f = d.getElementsByTagName(s)[0],
++                  j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
++              j.async = true;
++              j.src =
++                  'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
++              f.parentNode.insertBefore(j, f);
++          })(window, document, 'script', 'dataLayer', 'GTM-NJF3T5T');</script>
++      <meta charset="utf-8">
++      <meta http-equiv="X-UA-Compatible" content="IE=edge">
++      <meta name="viewport" content="width=device-width, initial-scale=1">
++      <meta name="author" content="Amy Hawkes">
++      <meta property="og:description"
++          content="Blood on the Clocktower is a captivating new social bluffing game of deduction, deception, murder, and mystery.">
++      <meta property="og:image" content="https://assets.bloodontheclocktower.com/img/website/facebook.jpg">
++      <meta property="og:type" content="website">
++
++      <link rel="canonical" href="https://checkout.bloodontheclocktower.com/404">
++      <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
++
++      <link rel="icon" type="image/png?rel=1629010074945" sizes="16x16"
++          href="//checkout.bloodontheclocktower.com/cdn/shop/t/20/assets/favicon.png?v=68669389563796127941682135564">
++
++      <script src="//checkout.bloodontheclocktower.com/cdn/shop/t/20/assets/global.js?v=149218417569708675861682135564" defer="defer"></script>
++      <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="facebook-domain-verification" content="6sr1dri4twzz4m0j9lw64329qe31d8">
++<meta name="facebook-domain-verification" content="10zqeck6krfc02yjzcn1ad6llbtw9g">
++<meta name="google-site-verification" content="GY9ELhOctAGOzedXRdjpFD4j24JXzJdx3zg5aiNhoEk">
++<meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/57467011226/digital_wallets/dialog">
++<meta name="shopify-checkout-api-token" content="fbfd67937f1a6c4d4bef0df69811fccc">
++<meta id="in-context-paypal-metadata" data-shop-id="57467011226" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
++<script async="async" src="/checkouts/internal/preloads.js?locale=en-US"></script>
++<link rel="preconnect" href="https://shop.app" crossorigin="anonymous">
++<script async="async" src="https://shop.app/checkouts/internal/preloads.js?locale=en-US&shop_id=57467011226" crossorigin="anonymous"></script>
++<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":57467011226,"countryCode":"AU","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/57467011226","merchantName":"The Pandemonium Institute","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","jcb"],"total":{"type":"pending","label":"The Pandemonium Institute","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
++<script id="shopify-features" type="application/json">{"accessToken":"fbfd67937f1a6c4d4bef0df69811fccc","betas":["rich-media-storefront-analytics"],"domain":"checkout.bloodontheclocktower.com","predictiveSearch":true,"shopId":57467011226,"locale":"en"}</script>
++<script>var Shopify = Shopify || {};
++Shopify.shop = "the-pandemonium-institute.myshopify.com";
++Shopify.locale = "en";
++Shopify.currency = {"active":"USD","rate":"1.0"};
++Shopify.country = "US";
++Shopify.theme = {"name":"botc 2023 support site (for checkout pages)","id":132197384346,"schema_name":"BOTC Theme","schema_version":"1.0.0","theme_store_id":null,"role":"main"};
++Shopify.theme.handle = "null";
++Shopify.theme.style = {"id":null,"handle":null};
++Shopify.cdnHost = "checkout.bloodontheclocktower.com/cdn";
++Shopify.routes = Shopify.routes || {};
++Shopify.routes.root = "/";</script>
++<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
++<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
++<script>window.ShopifyPay = window.ShopifyPay || {};
++window.ShopifyPay.apiHost = "shop.app\/pay";</script>
++<script id="shop-js-analytics" type="application/json">{"pageType":"404"}</script>
++<script>
++  window.Shopify = window.Shopify || {};
++  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
++  window.Shopify.featureAssets['shop-js'] = {"shop-cart-sync":["modules/v2/client.shop-cart-sync_CFtR87uK.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"shop-button":["modules/v2/client.shop-button_D-ZR1Pjy.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"init-windoid":["modules/v2/client.init-windoid_DJ58-HJT.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/client.init-shop-email-lookup-coordinator_fqsJ9aAj.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"init-fed-cm":["modules/v2/client.init-fed-cm_B7jw3DCo.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"checkout-modal":["modules/v2/client.checkout-modal_D6um9ECd.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"pay-button":["modules/v2/client.pay-button_Dajj3Ryn.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"shop-toast-manager":["modules/v2/client.shop-toast-manager_BWmhox22.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"shop-cash-offers":["modules/v2/client.shop-cash-offers_CkGuH-_R.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"avatar":["modules/v2/client.avatar_BTnouDA3.en.esm.js"],"init-shop-cart-sync":["modules/v2/client.init-shop-cart-sync_BZ7f7BMR.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js"],"shop-login-button":["modules/v2/client.shop-login-button_rbK_aLs8.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"shop-follow-button":["modules/v2/client.shop-follow-button_MuzIFwn3.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/client.init-shop-for-new-customer-accounts_CqiwJMv5.en.esm.js","modules/v2/client.shop-login-button_rbK_aLs8.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"init-customer-accounts":["modules/v2/client.init-customer-accounts_ByGURy7D.en.esm.js","modules/v2/client.shop-login-button_rbK_aLs8.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"init-customer-accounts-sign-up":["modules/v2/client.init-customer-accounts-sign-up_BSbmYv2H.en.esm.js","modules/v2/client.shop-login-button_rbK_aLs8.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"lead-capture":["modules/v2/client.lead-capture_CSGN0qCK.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"],"payment-terms":["modules/v2/client.payment-terms_DS-okREM.en.esm.js","modules/v2/chunk.common_BHTShlwS.esm.js","modules/v2/chunk.modal_Cvr3ME4Y.esm.js"]};
++</script>
++<script>(function() {
++  var isLoaded = false;
++  function asyncLoad() {
++    if (isLoaded) return;
++    isLoaded = true;
++    var urls = ["https:\/\/chimpstatic.com\/mcjs-connected\/js\/users\/d49109006d848c00e421f93d4\/88686f5f302db1b9a66058c3e.js?shop=the-pandemonium-institute.myshopify.com","https:\/\/d1639lhkj5l89m.cloudfront.net\/js\/storefront\/uppromote.js?shop=the-pandemonium-institute.myshopify.com"];
++    for (var i = 0; i < urls.length; i++) {
++      var s = document.createElement('script');
++      s.type = 'text/javascript';
++      s.async = true;
++      s.src = urls[i];
++      var x = document.getElementsByTagName('script')[0];
++      x.parentNode.insertBefore(s, x);
++    }
++  };
++  if(window.attachEvent) {
++    window.attachEvent('onload', asyncLoad);
++  } else {
++    window.addEventListener('load', asyncLoad, false);
++  }
++})();</script>
++<script id="__st">var __st={"a":57467011226,"offset":36000,"reqid":"39149a37-6662-4b9d-82cb-09041c12ca70-1752660067","pageurl":"checkout.bloodontheclocktower.com\/404","u":"72d484524021"};</script>
++<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
++<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
++<script integrity="sha256-Wo99wkt4HAR3/Mf1MqbBNi878Cj2feweJNCEwQQAT7o=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//checkout.bloodontheclocktower.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-02966510.js" crossorigin="anonymous"></script>
++<script crossorigin="anonymous" defer="defer" src="//checkout.bloodontheclocktower.com/cdn/shopifycloud/storefront/assets/shopify_pay/storefront-d21ba94d.js?v=20220906"></script>
++<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://checkout.bloodontheclocktower.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
++</script>
++<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
++  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
++</script>
++<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
++</script>
++<script id='scb4127' type='text/javascript' async='' src='https://checkout.bloodontheclocktower.com/cdn/shopifycloud/privacy-banner/storefront-banner.js'></script>
++<link rel="stylesheet" media="screen" href="https://checkout.bloodontheclocktower.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
++
++<style id="shopify-accelerated-checkout-cart">
++        #shopify-buyer-consent {
++  margin-top: 1em;
++  display: inline-block;
++  width: 100%;
++}
++
++#shopify-buyer-consent.hidden {
++  display: none;
++}
++
++#shopify-subscription-policy-button {
++  background: none;
++  border: none;
++  padding: 0;
++  text-decoration: underline;
++  font-size: inherit;
++  cursor: pointer;
++}
++
++#shopify-subscription-policy-button::before {
++  box-shadow: none;
++}
++
++      </style>
++<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
++
++      <title>
++        404 Not Found
++ &ndash; Blood on the Clocktower - A captivating new social bluffing game</title>
++      <meta name="description"
++          content="Blood on the Clocktower is a captivating new social bluffing game of deduction, deception, murder, and mystery.">
++      <meta property="og:title" content="Blood on the Clocktower">
++      <meta property="og:url" content="https://bloodontheclocktower.com">
++
++
++    <!-- FROM HYDROGEN (this is the html from the new site, which is used to restyle old website) -->
++      <link rel="stylesheet"
++          href="https://cdn.shopify.com/oxygen/57467011226/524442/me1dm0zgr/build/_assets/app-BKVB66P3.css" />
++      <link rel="preconnect" href="https://cdn.shopify.com" />
++      <link rel="preconnect" href="https://shop.app" />
++      <link rel="icon" type="image/svg+xml"
++          href="https://cdn.shopify.com/oxygen/57467011226/524442/me1dm0zgr/build/_assets/favicon-XTXLWAPC.png" />
++      <link rel="stylesheet" href="https://bloodontheclocktower.com/css-variables" />
++    <!-- END - FROM HYDROGEN -->
++
++    <!-- additional style -->
++    <style>
++        .main-body h1 {
++            font-size: 1.875rem;
++            line-height: 2.25rem;
++            text-transform: uppercase;
++        }
++
++        .main-body button {
++            -webkit-text-size-adjust: 100%;
++            font-size: 100%;
++            font-weight: inherit;
++            line-height: inherit;
++            margin: 0;
++            cursor: pointer;
++            -webkit-appearance: button;
++            background-color: transparent;
++            background-image: none;
++            display: flex;
++            width: 100%;
++            flex-direction: row;
++            align-items: center;
++            justify-content: center;
++            border-width: 2px;
++            --tw-border-opacity: 1;
++            border-color: rgb(123 93 78 / var(--tw-border-opacity));
++            padding-left: 1.25rem;
++            padding-right: 1.25rem;
++            padding-top: .5rem;
++            padding-bottom: .5rem;
++            font-family: dumbledor__kernedregular,ui-sans-serif,system-ui,sans-serif;
++            text-transform: uppercase;
++            --tw-text-opacity: 1;
++            color: rgb(123 93 78 / var(--tw-text-opacity));
++        }
++
++        .main-body .account p {
++            font-size: inherit;
++        }
++
++        .main-body .customer li {
++            list-style: none;
++        }
++
++        .main-body form input[type="text"],
++        .main-body form input[type="tel"],
++        .main-body form input[type="password"],
++        .main-body form input[type="email"] {
++            -webkit-text-size-adjust: 100%;
++            tab-size: 4;
++            box-sizing: border-box;
++            border-style: solid;
++            border-color: currentColor;
++            font-family: inherit;
++            font-size: 100%;
++            font-weight: inherit;
++            color: inherit;
++            margin: 0;
++            margin-bottom: .25rem;
++            width: 100%;
++            appearance: none;
++            border-radius: .25rem;
++            border-width: 1px;
++            padding-left: .75rem;
++            padding-right: .75rem;
++            padding-top: .5rem;
++            padding-bottom: .5rem;
++            line-height: 1.25;
++        }
++
++    </style>
++    <!-- END - additional style -->
++
++
++  <link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
++<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 57467011226,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "404"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
++<script id="web-pixels-manager-setup">(function e(e,d,r,n,o,i){if(void 0===i&&(i={}),!Boolean(null===(t=null===(a=window.Shopify)||void 0===a?void 0:a.analytics)||void 0===t?void 0:t.replayQueue)){var a,t;window.Shopify=window.Shopify||{};var s=window.Shopify;s.analytics=s.analytics||{};var l=s.analytics;l.replayQueue=[],l.publish=function(e,d,r){return l.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var u=function(){var e={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},d=e.modern,r=e.legacy,n=navigator.userAgent;return n.match(d)?"modern":n.match(r)?"legacy":"unknown"}(),c="modern"===u?"modern":"legacy",f=(null!=o?o:{modern:"",legacy:""})[c],m=function(e){return[e.baseUrl,"/wpm","/b",e.hashVersion,"modern"===e.buildTarget?"m":"l",".js"].join("")}({baseUrl:r,hashVersion:n,buildTarget:c}),p=function(e){var d=e.version,r=e.bundleTarget,n=e.surface,o=e.pageUrl,i=e.monorailEndpoint;return{emit:function(e){var a=e.status,t=e.errorMsg,s=(new Date).getTime(),l=JSON.stringify({metadata:{event_sent_at_ms:s},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:d,bundle_target:r,page_url:o,status:a,surface:n,error_msg:t},metadata:{event_created_at_ms:s}}]});if(!i)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(i,l)}catch(e){}var u=new XMLHttpRequest;try{return u.open("POST",i,!0),u.setRequestHeader("Content-Type","text/plain"),u.send(l),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}}}({version:n,bundleTarget:u,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint});try{i.browserTarget=u,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,i=e.onerror,a=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,a&&(l.integrity=a,l.crossOrigin="anonymous"),s)for(var f in s)if(Object.prototype.hasOwnProperty.call(s,f))try{l.dataset[f]=s[f]}catch(e){}if(o&&l.addEventListener("load",o),i&&l.addEventListener("error",i),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:m,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null===(d=null===(e=window.Shopify)||void 0===e?void 0:e.analytics)||void 0===d?void 0:d.initialized)}()){var r=window.webPixelsManager.init(e)||void 0;if(r){d(r);var n=window.Shopify.analytics;n.replayQueue.forEach((function(e){var d=e[0],n=e[1],o=e[2];r.publishCustomEvent(d,n,o)})),n.replayQueue=[],n.publish=r.publishCustomEvent,n.visitor=r.visitor,n.initialized=!0}}},onerror:function(){return p.emit({status:"failed",errorMsg:"".concat(m," has failed to load")})},sri:function(e){var d=/^sha384-[A-Za-z0-9+/=]+$/;return"string"==typeof e&&d.test(e)}(f)?f:"",scriptDataAttributes:i}),p.emit({status:"loading"})}catch(e){p.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}})({shopId: 57467011226,storefrontBaseUrl: "https://checkout.bloodontheclocktower.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["ac843a20"],webPixelsConfigList: [{"id":"732168346","configuration":"{\"config\":\"{\\\"pixel_id\\\":\\\"G-JJG8W9DXCV\\\",\\\"target_country\\\":\\\"US\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/i5FcCNmYw-sZEKSR0bsp\\\"]},{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/r7RPCN-Yw-sZEKSR0bsp\\\"]},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/QVG3CNaYw-sZEKSR0bsp\\\",\\\"MC-JSTP5ZCZ3N\\\"]},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/o-YuCNCYw-sZEKSR0bsp\\\",\\\"MC-JSTP5ZCZ3N\\\"]},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/5YpVCNOYw-sZEKSR0bsp\\\",\\\"MC-JSTP5ZCZ3N\\\"]},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/p13WCNqZw-sZEKSR0bsp\\\"]},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":[\\\"G-JJG8W9DXCV\\\",\\\"AW-11130914980\\/DtOYCNyYw-sZEKSR0bsp\\\"]}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"b2a88bafab3e21179ed38636efcd8a93","type":"APP","apiClientId":1780363,"privacyPurposes":[]},{"id":"296943770","configuration":"{\"pixel_id\":\"1052985128875594\",\"pixel_type\":\"facebook_pixel\",\"metaapp_system_user_token\":\"-\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"6d8c3ef0426b37b2a9b717daeb719f58","type":"APP","apiClientId":2329312,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0440","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0440","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"The Pandemonium Institute","paymentSettings":{"currencyCode":"USD"},"myshopifyDomain":"the-pandemonium-institute.myshopify.com","countryCode":"AU","storefrontUrl":"https://checkout.bloodontheclocktower.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"purchasingCompany":null},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed", {});},"https://checkout.bloodontheclocktower.com/cdn","24c17cf0w8c7d1f74p2dcac2acma61dd80e",{"modern":"","legacy":""},{"shopId":"57467011226","storefrontBaseUrl":"https://checkout.bloodontheclocktower.com","extensionBaseUrl":"https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"ac843a20\"]","isMerchantRequest":"false","hashVersion":"24c17cf0w8c7d1f74p2dcac2acma61dd80e","publish":"custom"});</script><script>
++  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
++  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
++  window.ShopifyAnalytics.meta.currency = 'USD';
++  var meta = {"page":{}};
++  for (var attr in meta) {
++    window.ShopifyAnalytics.meta[attr] = meta[attr];
++  }
++</script>
++<script class="analytics">
++  (function () {
++    var customDocumentWrite = function(content) {
++      var jquery = null;
++
++      if (window.jQuery) {
++        jquery = window.jQuery;
++      } else if (window.Checkout && window.Checkout.$) {
++        jquery = window.Checkout.$;
++      }
++
++      if (jquery) {
++        jquery('body').append(content);
++      }
++    };
++
++    var hasLoggedConversion = function(token) {
++      if (token) {
++        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
++      }
++      return false;
++    }
++
++    var setCookieIfConversion = function(token) {
++      if (token) {
++        var twoMonthsFromNow = new Date(Date.now());
++        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
++
++        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
++      }
++    }
++
++    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
++    if (trekkie.integrations) {
++      return;
++    }
++    trekkie.methods = [
++      'identify',
++      'page',
++      'ready',
++      'track',
++      'trackForm',
++      'trackLink'
++    ];
++    trekkie.factory = function(method) {
++      return function() {
++        var args = Array.prototype.slice.call(arguments);
++        args.unshift(method);
++        trekkie.push(args);
++        return trekkie;
++      };
++    };
++    for (var i = 0; i < trekkie.methods.length; i++) {
++      var key = trekkie.methods[i];
++      trekkie[key] = trekkie.factory(key);
++    }
++    trekkie.load = function(config) {
++      trekkie.config = config || {};
++      trekkie.config.initialDocumentCookie = document.cookie;
++      var first = document.getElementsByTagName('script')[0];
++      var script = document.createElement('script');
++      script.type = 'text/javascript';
++      script.onerror = function(e) {
++        var scriptFallback = document.createElement('script');
++        scriptFallback.type = 'text/javascript';
++        scriptFallback.onerror = function(error) {
++                var Monorail = {
++      produce: function produce(monorailDomain, schemaId, payload) {
++        var currentMs = new Date().getTime();
++        var event = {
++          schema_id: schemaId,
++          payload: payload,
++          metadata: {
++            event_created_at_ms: currentMs,
++            event_sent_at_ms: currentMs
++          }
++        };
++        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
++      },
++      sendRequest: function sendRequest(endpointUrl, payload) {
++        // Try the sendBeacon API
++        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
++          var blobData = new window.Blob([payload], {
++            type: 'text/plain'
++          });
++
++          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
++            return true;
++          } // sendBeacon was not successful
++
++        } // XHR beacon
++
++        var xhr = new XMLHttpRequest();
++
++        try {
++          xhr.open('POST', endpointUrl);
++          xhr.setRequestHeader('Content-Type', 'text/plain');
++          xhr.send(payload);
++        } catch (e) {
++          console.log(e);
++        }
++
++        return false;
++      },
++      isIos12: function isIos12() {
++        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
++      }
++    };
++    Monorail.produce('monorail-edge.shopifysvc.com',
++      'trekkie_storefront_load_errors/1.1',
++      {shop_id: 57467011226,
++      theme_id: 132197384346,
++      app_name: "storefront",
++      context_url: window.location.href,
++      source_url: "//checkout.bloodontheclocktower.com/cdn/s/trekkie.storefront.b3f6b13e75bd700f0424d0f0e2fe40182e7f8a62.min.js"});
++
++        };
++        scriptFallback.async = true;
++        scriptFallback.src = '//checkout.bloodontheclocktower.com/cdn/s/trekkie.storefront.b3f6b13e75bd700f0424d0f0e2fe40182e7f8a62.min.js';
++        first.parentNode.insertBefore(scriptFallback, first);
++      };
++      script.async = true;
++      script.src = '//checkout.bloodontheclocktower.com/cdn/s/trekkie.storefront.b3f6b13e75bd700f0424d0f0e2fe40182e7f8a62.min.js';
++      first.parentNode.insertBefore(script, first);
++    };
++    trekkie.load(
++      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":57467011226,"isMerchantRequest":null,"themeId":132197384346,"themeCityHash":"13659831343556526457","contentLanguage":"en","currency":"USD","eventMetadataId":"0fb2c99d-1805-48f1-8fae-b52c60b8d932"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":true,"source":"trekkie-storefront-renderer","apiClientId":580111}}
++    );
++
++    var loaded = false;
++    trekkie.ready(function() {
++      if (loaded) return;
++      loaded = true;
++
++      window.ShopifyAnalytics.lib = window.trekkie;
++
++      var originalDocumentWrite = document.write;
++      document.write = customDocumentWrite;
++      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
++      document.write = originalDocumentWrite;
++
++      window.ShopifyAnalytics.lib.page(null,{"shopifyEmitted":true});
++
++      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
++      var token = match? match[1]: undefined;
++      if (!hasLoggedConversion(token)) {
++        setCookieIfConversion(token);
++
++      }
++    });
++
++
++        var eventsListenerScript = document.createElement('script');
++        eventsListenerScript.async = true;
++        eventsListenerScript.src = "//checkout.bloodontheclocktower.com/cdn/shopifycloud/storefront/assets/shop_events_listener-8675b082.js";
++        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
++
++})();</script>
++<script
++  defer
++  src="https://checkout.bloodontheclocktower.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.6.6.min.js"
++  data-application="storefront-renderer"
++  data-shop-id="57467011226"
++  data-render-region="gcp-us-central1"
++  data-page-type="404"
++  data-theme-instance-id="132197384346"
++  data-theme-name="BOTC Theme"
++  data-theme-version="1.0.0"
++  data-monorail-region="shop_domain"
++  data-resource-timing-sampling-rate="10"
++  data-shs="true"
++></script>
++</head>
++
++  <body>
++
++<!-- FROM HYDROGEN -->
++    <div class="bg-purple-grape relative">
++        <div class=""
++            style="position:fixed;top:0;left:0;height:3px;background:transparent;z-index:99999999999;width:100%">
++            <div class="" style="height:100%;background:#D1BB87;transition:all 500ms ease;width:0%">
++                <div
++                    style="box-shadow:0 0 10px #D1BB87, 0 0 10px #D1BB87;width:5%;opacity:1;position:absolute;height:100%;transition:all 500ms ease;transform:rotate(3deg) translate(0px, -4px);left:-10rem">
++                </div>
++            </div>
++        </div>
++        <div class="flex flex-col min-h-screen overflow-hidden">
++            <header role="banner"
++                class="w-full h-40 z-40 px-12 py-8 bg-purple-grape [-webkit-mask-image:var(--botc-mask-paper-tear-bottom)] [mask-image:var(--botc-mask-paper-tear-bottom)] [-webkit-mask-repeat:repeat-x] [mask-repeat:repeat-x] [mask-size:cover] [mask-position:bottom]">
++                <div class="max-w-7xl m-auto flex items-center justify-between">
++                    <div class="flex gap-12"><a class="font-bold" href="/"><img alt="Blood on the Clocktower logo"
++                                src="https://cdn.shopify.com/oxygen/57467011226/524442/me1dm0zgr/build/_assets/logo-col-JLMWIEQL.png"
++                                width="142" height="80" /></a></div>
++                    <div class="flex gap-8"><span class="hidden sm:inline"><a
++                                class="flex flex-row justify-center items-center font-botc-heading uppercase text-cream-springwood border-2 border-cream-springwood px-5 py-2"
++                                href="/products/blood-on-the-clocktower-the-game"><span class="pt-1">buy
++                                    game</span></a></span></div>
++                </div>
++            </header>
++            <main role="main" id="mainContent">
++                <div class="flex flex-col">
++                    <div class="w-full -mt-10 relative" style="z-index:1">
++                        <section
++                            class="text-ink-wineberry botc-bg-light-rough-tile bg-top bg-auto h-full px-10 sm:px-16 md:px-24 pb-24 pt-20 [-webkit-mask-image:var(--botc-mask-paper-tear-bottom] [mask-image:var(--botc-mask-paper-tear-bottom)] [-webkit-mask-repeat:repeat-x] [mask-repeat:repeat-x] [mask-size:cover] [mask-position:bottom]">
++                            <div
++                                class="flex flex-col justify-center items-stretch max-w-7xl m-auto text-center md:text-left">
++                                <span class="botc-text-block">
++
++
++
++
++<!-- END - FROM HYDROGEN -->
++
++
++
++
++      <div class="main-body">
++        <div id="shopify-section-template--16088934580378__main" class="shopify-section"><style type="text/css">
++  .template-404 .title + * {
++    margin-top: 1rem;
++  }
++
++  @media screen and (min-width: 750px) {
++    .template-404 .title + * {
++      margin-top: 2rem;
++    }
++  }
++</style>
++
++<div class="template-404 page-width page-margin center">
++  <p>
++    404
++  </p>
++  <h1 class="title">
++    Page not found
++  </h1>
++  <a href="/collections/all" class="button">
++    Continue shopping
++  </a>
++</div>
++</div>
++      </div>
++
++
++<!-- FROM HYDROGEN -->
++    </span></div></section></div></div>
++
++    </main>
++    </div>
++    <footer role="contentinfo" class="text-cream-springwood">
++        <div class="bg-cream-straw text-cream-springwood p-2 text-center" style="margin-top: 100px">Copyright © 2019 - 2023<span
++                class="hidden md:inline">, </span> <span
++                class="hidden md:inline-block">bloodontheclocktower.com</span></div>
++    </footer>
++    </div>
++
++
++<!-- END - FROM HYDROGEN -->
++
++
++
++
++
++
++      <script src="//checkout.bloodontheclocktower.com/cdn/shop/t/20/assets/main.min.js?v=12565219856867916601682135564"></script>
++      <script>(function (i, s, o, g, r, a, m) {
++              i['GoogleAnalyticsObject'] = r;
++              i[r] = i[r] || function () {
++                  (i[r].q = i[r].q || []).push(arguments)
++              }, i[r].l = 1 * new Date();
++              a = s.createElement(o),
++                  m = s.getElementsByTagName(o)[0];
++              a.async = 1;
++              a.src = g;
++              m.parentNode.insertBefore(a, m)
++          })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
++          ga('create', 'UA-105364214-1', 'auto');
++          ga('send', 'pageview');</script>
++
++
++
++  <!-- Failed to render app block "4644077978495408606": app block path "shopify://apps/appstle-memberships-loyalty/blocks/appstle-membership-helper/76528d70-5fbe-48f8-8e19-590d109aa2b7" does not exist --></body>
++
++  </html>
+\ No newline at end of file
+diff --git a/src/components/CharacterCard.css b/src/components/CharacterCard.css
+index 0df393fecdb79971b809da350d80f67627cb7390..ee88b39b7c26d9721386be20274bd1e513949ac3 100644
+--- a/src/components/CharacterCard.css
++++ b/src/components/CharacterCard.css
+@@ -1,27 +1,28 @@
+ .character-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 150px;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   margin: 0.5rem;
+   cursor: pointer;
+   background-color: #f9f9f9;
++  color: #333;
+ }
+ .character-card.selected {
+   border-color: #646cff;
+ }
+ .character-image {
+   width: 100px;
+   height: 100px;
+   object-fit: contain;
+ }
+ .character-info {
+   text-align: center;
+ }
+ .team {
+   font-size: 0.8rem;
+   color: #666;
+ }
+diff --git a/src/components/FilterPanel.css b/src/components/FilterPanel.css
+index 7ff79d27cb9e902134962d8cc6278f0d96888744..99f38fecff0342d378b49e693e889c60a4a5f5dc 100644
+--- a/src/components/FilterPanel.css
++++ b/src/components/FilterPanel.css
+@@ -1,12 +1,13 @@
+ .filter-panel {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   background-color: #eef2ff;
+   padding: 1rem;
+   border-radius: 4px;
++  color: #333;
+ }
+ .filter-group {
+   display: flex;
+   flex-direction: column;
+ }
+diff --git a/src/components/Loader.css b/src/components/Loader.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..1b3139d785060d84fde6fd12ced53218d548ceb9
+--- /dev/null
++++ b/src/components/Loader.css
+@@ -0,0 +1,28 @@
++.sk-cube-grid {
++  width: 40px;
++  height: 40px;
++  margin: 40px auto;
++}
++
++.sk-cube-grid .sk-cube {
++  width: 33%;
++  height: 33%;
++  background-color: #333;
++  float: left;
++  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
++}
++
++.sk-cube-grid .sk-cube1 { animation-delay: 0.2s; }
++.sk-cube-grid .sk-cube2 { animation-delay: 0.3s; }
++.sk-cube-grid .sk-cube3 { animation-delay: 0.4s; }
++.sk-cube-grid .sk-cube4 { animation-delay: 0.1s; }
++.sk-cube-grid .sk-cube5 { animation-delay: 0.2s; }
++.sk-cube-grid .sk-cube6 { animation-delay: 0.3s; }
++.sk-cube-grid .sk-cube7 { animation-delay: 0.0s; }
++.sk-cube-grid .sk-cube8 { animation-delay: 0.1s; }
++.sk-cube-grid .sk-cube9 { animation-delay: 0.2s; }
++
++@keyframes sk-cubeGridScaleDelay {
++  0%, 70%, 100% { transform: scale3D(1, 1, 1); }
++  35% { transform: scale3D(0, 0, 1); }
++}
+diff --git a/src/components/ScriptPanel.css b/src/components/ScriptPanel.css
+index a816e2ed3eb179a4af1fe9472bf38eac655147f8..b095b34c4fb614f083a4192e7192d25f98df0bc6 100644
+--- a/src/components/ScriptPanel.css
++++ b/src/components/ScriptPanel.css
+@@ -1,27 +1,29 @@
+ .script-panel {
+   margin-top: 1rem;
+   border-top: 1px solid #ccc;
+   background-color: #fffde7;
+   padding: 1rem;
+   border-radius: 4px;
++  color: #333;
+ }
+ .selection {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+ }
+ .selected-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   margin-bottom: 0.5rem;
+ }
+ .selected-item {
+   padding: 0.25rem 0.5rem;
+   background: #eee;
+   border-radius: 4px;
+   cursor: pointer;
++  color: #333;
+ }
+ .script-buttons button {
+   margin-right: 0.5rem;
+ }
+diff --git a/src/components/SheetView.css b/src/components/SheetView.css
+index d00349436f5bf598ad28c508ef8482036c396bb8..5976ac8c08c185c11d0531ca4e70e7f2de9cd9f2 100644
+--- a/src/components/SheetView.css
++++ b/src/components/SheetView.css
+@@ -1,53 +1,55 @@
+ .sheet-view {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+
+ .sheet-controls {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+ }
+
+ .sheet-controls input {
+   padding: 0.25rem 0.5rem;
+   flex: 1 1 150px;
+ }
+
+ .sheet-table {
+   background: #fff;
+   padding: 1rem;
+   border-radius: 4px;
++  color: #333;
+ }
+
+ .team-section {
+   margin-bottom: 1rem;
+ }
+
+ .team-label {
+   margin: 0.5rem 0;
+   background: #f0f0f0;
+   padding: 0.25rem 0.5rem;
+   border-radius: 4px;
++  color: #333;
+ }
+
+ table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+
+ .icon-cell img {
+   width: 24px;
+   height: 24px;
+   object-fit: contain;
+ }
+
+ .name-cell {
+   font-weight: bold;
+   width: 120px;
+ }
+
+ .ability-cell {
+   text-align: left;
+ }
+diff --git a/src/index.css b/src/index.css
+index 08a3ac9e1e5c44ce374f782d7c4fa3aa70e4c1ff..f7715b8895f92d8753f56c58dd8ac135b02d6385 100644
+--- a/src/index.css
++++ b/src/index.css
+@@ -1,68 +1,56 @@
+ :root {
+-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
++  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
++  font-size: 16px;
+   line-height: 1.5;
+   font-weight: 400;
+
+-  color-scheme: light dark;
+-  color: rgba(255, 255, 255, 0.87);
+-  background-color: #242424;
++  color: #333;
++  background-color: #fff;
+
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ a {
+   font-weight: 500;
+   color: #646cff;
+   text-decoration: inherit;
+ }
+ a:hover {
+   color: #535bf2;
+ }
+
+ body {
+   margin: 0;
+-  display: flex;
+-  place-items: center;
+   min-width: 320px;
+   min-height: 100vh;
++  background: url('./assets/images/website/bg-mandala.webp') top right repeat;
+ }
+
+ h1 {
+   font-size: 3.2em;
+   line-height: 1.1;
+ }
+
+ button {
+   border-radius: 8px;
+   border: 1px solid transparent;
+   padding: 0.6em 1.2em;
+   font-size: 1em;
+   font-weight: 500;
+   font-family: inherit;
+   background-color: #1a1a1a;
+   cursor: pointer;
+   transition: border-color 0.25s;
+ }
+ button:hover {
+   border-color: #646cff;
+ }
+ button:focus,
+ button:focus-visible {
+   outline: 4px auto -webkit-focus-ring-color;
+ }
+
+-@media (prefers-color-scheme: light) {
+-  :root {
+-    color: #213547;
+-    background-color: #ffffff;
+-  }
+-  a:hover {
+-    color: #747bff;
+-  }
+-  button {
+-    background-color: #f9f9f9;
+-  }
+-}
++
+
+EOF
+)
