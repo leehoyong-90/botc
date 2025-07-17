@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { characters, editions, teams, teamDisplayNames, type Character } from './data/characters';
-import FilterPanel from '../components/FilterPanel';
-import CharacterCard from '../components/CharacterCard';
-import ScriptPanel from '../components/ScriptPanel';
-import SheetView from '../components/SheetView';
-import { ScrollArea } from '../components/ui/scroll-area';
+import FilterPanel from './components/FilterPanel';
+import CharacterCard from './components/CharacterCard';
+import ScriptPanel from './components/ScriptPanel';
+import SheetView from './components/SheetView';
+import { ScrollArea } from './components/ui/scroll-area';
 
 export default function App() {
   // Filter states
